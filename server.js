@@ -30,6 +30,9 @@ io.on("connection", (socket) => {
     console.log("User disconnected:", socket.id);
   });
 });
+app.get("/", (req, res) => {
+  res.send("Signaling server is up and running");
+});
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
